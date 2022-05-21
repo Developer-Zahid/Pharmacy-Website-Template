@@ -1,0 +1,71 @@
+/* Common Button's Style */
+.btn{
+	font-size: toRem(18);
+	font-family: $font-primary;
+	font-weight: 700;
+	padding: toEm(12) toEm(25);
+	border-radius: toRem(7);
+	@extend %transition;
+	&:focus{
+		box-shadow: none;
+	}
+	&:not(&--transparent){
+		color: $color-white;
+		background-color: $color-primary;
+		box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-primary, $alpha: 0.4);
+		@include min-tablet{
+			&:hover{
+				color: $color-white;
+				background-color: $color-secondary;
+				box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-secondary, $alpha: 0.4);
+			}
+		}
+		&:active,
+		&:focus
+		{
+			color: $color-white;
+			background-color: $color-secondary;
+			box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-secondary, $alpha: 0.4);
+		}
+	}
+	&--transparent{
+		&--secondary{
+			&:active,
+			&:focus-visible
+			{
+				color: $color-secondary !important;
+			}
+			@include min-tablet{
+				&:hover{
+					color: $color-secondary !important;
+				}
+			}
+		}
+	}
+}
+
+.scroll-top{
+	bottom: toRem(15);
+	right: toRem(15);
+	display: none;
+	cursor: pointer;
+	z-index: 7;
+	&__btn{
+		width: toRem(45);
+		height: toRem(45);
+		font-size: toRem(18);
+		color: $color-white;
+		background-color: $color-primary;
+		box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-primary, $alpha: 0.4);
+		border-radius: toRem(7);
+		@extend %transition;
+		@include min-tablet{
+			&:hover{
+				background-color: $color-secondary;
+			}
+		}
+		&:active{
+			background-color: $color-secondary;
+		}
+	}
+}
