@@ -1,0 +1,24 @@
+.services{
+    &__card{
+        padding: toRem(20) toRem(15);
+        margin-bottom: toRem(30);
+        &__icon{
+            width: toRem(120);
+            height: toRem(120);
+            line-height: toRem(120);
+            border-radius: 50%;
+            border: 1px solid #f2f1f6;
+            background-color: darken($color-white, $amount: 3);
+            &__image{
+                max-height: toRem(55);
+            }
+        }
+        &__title{
+            margin-top: toRem(10);
+            margin-bottom: toRem(15);
+        }
+        &__text{
+            color: $color-gray;
+        }
+    }
+}

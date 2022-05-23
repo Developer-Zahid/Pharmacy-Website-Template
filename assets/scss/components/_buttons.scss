@@ -29,15 +29,15 @@
 		}
 	}
 	&--transparent{
-		&--secondary{
+		&--primary{
 			&:active,
 			&:focus-visible
 			{
-				color: $color-secondary !important;
+				color: $color-primary !important;
 			}
 			@include min-tablet{
 				&:hover{
-					color: $color-secondary !important;
+					color: $color-primary !important;
 				}
 			}
 		}

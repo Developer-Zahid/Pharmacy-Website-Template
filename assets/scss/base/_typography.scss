@@ -1,20 +1,9 @@
 /* Google Fonts Link */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700;900&display=swap');
 
 /* Bootstrap Icons Link */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
-
-/* Custom Fonts Link */
-@font-face {
-    font-family: unset;
-    src: url('../fonts/.woff') format('woff'),
-         url('../fonts/.svg#KenyanCoffeeRg-Regular') format('svg'),
-         url('../fonts/.eot'),
-         url('../fonts/.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
 
 /* Typography Reset */
 h1,.h1,

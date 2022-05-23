@@ -24,7 +24,7 @@ html{
 }
 
 body {
-	color: $color-black;
+	color: $color-secondary;
 	font-weight: 400;
 	font-family: $font-primary;
 }
@@ -192,13 +192,20 @@ img{
 
 /* Common Section Heading Style */
 .section-header{
+	text-align: center;
 	margin-bottom: toRem(50);
 	@include mobile{
 		margin-bottom: toRem(30);
 	}
+	&__sub-title{
+		color: $color-primary;
+		text-transform: uppercase;
+	}
 	&__title{
 		font-size: toRem(40);
-		font-family: unset;
+		max-width: toRem(600);
+		margin-left: auto;
+		margin-right: auto;
 		@include tablet{
 			font-size: toRem(30);
 		}

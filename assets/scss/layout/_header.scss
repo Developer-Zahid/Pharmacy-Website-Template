@@ -8,11 +8,8 @@
 	@extend %transition;
 	.navbar{
 		&-brand{
-			&__text{
-				color: $color-black;
-				font-size: toRem(24);
-				font-weight: 700;
-				display: inline-block;
+			&__logo{
+				max-height: toRem(60);
 			}
 		}
 		&-toggler{
