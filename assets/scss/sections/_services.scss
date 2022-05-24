@@ -1,7 +1,8 @@
 .services{
     &__card{
-        padding: toRem(20) toRem(15);
+        padding: toRem(40) toRem(15);
         margin-bottom: toRem(30);
+        border: 1px solid #e4e8f1;
         &__icon{
             width: toRem(120);
             height: toRem(120);

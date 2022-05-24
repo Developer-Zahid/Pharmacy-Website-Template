@@ -321,6 +321,38 @@ img {
   }
 }
 
+.match-height > [class*="col"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.match-height > [class*="col"] > * {
+  width: 100%;
+}
+
+.match-height > [class*="col"] > [class*="card"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 /* Common Transition Style */
 .slick__arrows, .slick-dots li button, .btn, .scroll-top__btn, .header, .header .navbar-toggler, .header .navbar-toggler__icon, .header .navbar .nav-item .dropdown-menu, .header .navbar .nav-item .dropdown-item, .header .navbar .nav-link, .footer__copyright__link {
   -webkit-transition: all linear .3s;
@@ -507,7 +539,7 @@ img {
             justify-content: center;
     width: 50%;
     height: 100vh;
-    background-color: #6b67d6;
+    background-color: #f7f7f7;
     -webkit-transition: -webkit-transform ease-in-out .3s;
     transition: -webkit-transform ease-in-out .3s;
     -o-transition: -o-transform ease-in-out .3s;
@@ -619,12 +651,6 @@ img {
   font-family: "DM Sans", sans-serif;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-}
-
-@media (max-width: 991.98px) {
-  .header .navbar .nav-link {
-    color: #ffffff;
-  }
 }
 
 .header .navbar .nav-link.active, .header .navbar .nav-link:hover, .header .navbar .nav-link:focus-visible {
@@ -778,12 +804,17 @@ img {
 .banner__content {
   max-width: 50rem;
   padding: 3.125rem 1.875rem;
-  margin-top: -3.125em;
   background-color: #ffffff;
   border: 1px solid #f2f1f6;
-  -webkit-box-shadow: 0 35px 40px 0 rgba(36, 49, 160, 0.06);
-          box-shadow: 0 35px 40px 0 rgba(36, 49, 160, 0.06);
-  border-radius: 0.625rem;
+}
+
+@media (min-width: 992px) {
+  .banner__content {
+    margin-top: -3.125em;
+    -webkit-box-shadow: 0 35px 40px 0 rgba(36, 49, 160, 0.06);
+            box-shadow: 0 35px 40px 0 rgba(36, 49, 160, 0.06);
+    border-radius: 0.625rem;
+  }
 }
 
 .banner__content__icon {
@@ -801,8 +832,9 @@ img {
 }
 
 .services__card {
-  padding: 1.25rem 0.9375rem;
+  padding: 2.5rem 0.9375rem;
   margin-bottom: 1.875rem;
+  border: 1px solid #e4e8f1;
 }
 
 .services__card__icon {

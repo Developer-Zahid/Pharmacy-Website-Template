@@ -61,7 +61,7 @@
 				justify-content: center;
 				width: 50%;
 				height: 100vh;
-				background-color: $color-primary--soft;
+				background-color: darken($color-white, $amount: 3);
 				transition: transform ease-in-out .3s;
 				&.show{
 					transform: translateX(0);
@@ -72,9 +72,6 @@
 					.btn--transparent--secondary{
 						color: $color-white;
 					}
-					// .nav-item{
-					// 	margin: 0.3rem 0.6rem;
-					// }
 				}
 			}
 			@include tablet{
@@ -155,9 +152,6 @@
 			}
 			&-link{
 				color: $color-gray;
-				@include desktop{
-					color: $color-white;
-				}
 				font-size: 1rem;
 				font-weight: 400;
 				font-family: $font-primary;

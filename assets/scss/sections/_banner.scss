@@ -12,11 +12,13 @@
     &__content{
         max-width: toRem(800);
         padding: toRem(50) toRem(30);
-        margin-top: toEm(-50);
         background-color: $color-white;
         border: 1px solid #f2f1f6;
-        box-shadow: 0 35px 40px 0 rgba(36, 49, 160, 0.06);
-        border-radius: toRem(10);
+        @include min-desktop{
+            margin-top: toEm(-50);
+            box-shadow: 0 35px 40px 0 rgba(36, 49, 160, 0.06);
+            border-radius: toRem(10);
+        }
         &__icon{
             width: toRem(100);
             height: toRem(100);

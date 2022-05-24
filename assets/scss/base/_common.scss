@@ -214,3 +214,17 @@ img{
 		}
 	}
 }
+
+.match-height > [class*="col"]{
+	display: flex;
+}
+
+.match-height > [class*="col"] > *{
+	width: 100%;
+}
+
+.match-height > [class*="col"] > [class*="card"]{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
