@@ -199,22 +199,30 @@ img{
 	}
 	&__sub-title{
 		color: $color-primary;
+		font-size: toRem(18);
+		@include mobile{
+			font-size: toRem(16);
+		}
+		font-weight: 700;
+		letter-spacing: 0.06em;
 		text-transform: uppercase;
 	}
 	&__title{
-		font-size: toRem(40);
-		max-width: toRem(600);
+		font-family: $font-secondary;
+		font-size: toRem(50);
+		max-width: toRem(700);
 		margin-left: auto;
 		margin-right: auto;
-		@include tablet{
-			font-size: toRem(30);
+		@include desktop{
+			font-size: toRem(35);
 		}
 		@include mobile{
-			font-size: toRem(26);
+			font-size: toRem(28);
 		}
 	}
 }
 
+/* Match Block Height Style */
 .match-height > [class*="col"]{
 	display: flex;
 }
@@ -227,4 +235,11 @@ img{
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 auto;
+}
+
+/* Zikzak Section Style */
+.section-zikzak > [class*="col"]:nth-of-type(2n) > [class*="card"]{
+	@include min-desktop{
+		margin-top: toRem(40);
+	}
 }

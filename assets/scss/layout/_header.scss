@@ -8,7 +8,7 @@
 	@extend %transition;
 	.navbar{
 		&-brand{
-			&__logo{
+			&__image{
 				max-height: toRem(60);
 			}
 		}
@@ -61,7 +61,7 @@
 				justify-content: center;
 				width: 50%;
 				height: 100vh;
-				background-color: darken($color-white, $amount: 3);
+				background-color: $color-white-soft;
 				transition: transform ease-in-out .3s;
 				&.show{
 					transform: translateX(0);
@@ -152,7 +152,7 @@
 			}
 			&-link{
 				color: $color-gray;
-				font-size: 1rem;
+				font-size: toRem(18);
 				font-weight: 400;
 				font-family: $font-primary;
 				padding-left: toRem(15);
@@ -212,7 +212,7 @@
 		transform: translateX(0);
 		opacity: 1;
 	}
-	@include tablet-to-desktop-lg{
+	@include tablet-to-desktop{
 		display: block;
 	}
 }

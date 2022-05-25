@@ -1,3 +1,4 @@
+/* Main Banner Section Style */
 .banner{
     padding: 0;
     &__wrapper{
@@ -27,10 +28,19 @@
             background-color: darken($color-white, $amount: 3);
         }
         &__title{
-            // font-size: toRem(28);
             font-family: $font-secondary;
             margin: toRem(15) 0;
             text-transform: capitalize;
         }
+        &__text{
+            color: $color-gray;
+            font-size: toRem(18);
+            font-weight: 500;
+        }
     }
+}
+
+/* Sub Banner Section Style */
+.sub-banner{
+    padding: toRem(100) 0;
 }

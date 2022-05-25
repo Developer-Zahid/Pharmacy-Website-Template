@@ -1,0 +1,59 @@
+.steps{
+    counter-reset: step-number;
+    &__card{
+        counter-increment: step-number;
+        text-align: center;
+        padding: toRem(40) toRem(30);
+        @media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+            padding: toRem(40) toRem(15);
+        }
+        margin-bottom: toRem(30);
+        &__counter{
+            position: relative;
+            width: toRem(100);
+            height: toRem(100);
+            line-height: toRem(100);
+            text-align: center;
+            border-radius: 50%;
+            font-size: toRem(50);
+            font-weight: 700;
+            color: $color-white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: toRem(36);
+            background-color: $color-secondary;
+            @include desktop-lg{
+                width: toRem(80);
+                height: toRem(80);
+                line-height: toRem(80);
+                font-size: toRem(30);
+            }
+            &::after{
+                content: counter(step-number);
+            }
+        }
+        &__title{
+            font-size: toRem(34);
+            @include desktop-lg{
+                font-size: toRem(28);
+            }
+            font-weight: 700;
+            font-family: $font-secondary;
+            margin-bottom: toRem(15);
+        }
+        &__text{
+            color: $color-gray;
+            font-size: toRem(18);
+            font-weight: 500;
+            line-height: 1.667em;
+            margin-bottom: 0;
+        }
+        .btn{
+            margin-top: toRem(20);
+        }
+    }
+}
+
+.section-zikzak > [class*="col"]:nth-of-type(2n) .steps__card .steps__card__counter{
+    background-color: $color-primary;
+}

@@ -79,8 +79,15 @@
 }
 
 //sm-lg
-@mixin tablet-to-desktop-lg {
-    @media (min-width: 768px) and (max-width: 1199.98px) {
+@mixin tablet-to-desktop {
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        @content;
+    }
+}
+
+//md-lg
+@mixin desktop-to-desktop-lg {
+    @media (min-width: 992px) and (max-width: 1200px) {
         @content;
     }
 }

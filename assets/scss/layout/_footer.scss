@@ -1,14 +1,27 @@
 /* Footer Section Style */
 .footer{
+    padding: toRem(50) 0;
+    background-color: $color-secondary;
+    &-brand__image{
+        max-height: toRem(50);
+    }
     &__copyright{
-        color: unset;
+        color: $color-white;
         font-size: toRem(14);
         &__link{
             @extend %transition;
             &:hover,
             &:focus{
-                color: unset;
+                text-decoration: underline;
             }
+        }
+    }
+    &-nav__link{
+        color: $color-white !important;
+        &:hover,
+        &:focus
+        {
+            text-decoration: underline;
         }
     }
 }

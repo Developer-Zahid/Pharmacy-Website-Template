@@ -16,7 +16,8 @@ Table of Content
 */
 /* Google Fonts Link */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/invisible-2");
 /* Bootstrap Icons Link */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 /* Typography Reset */
@@ -26,11 +27,12 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h1, .h1 {
   font-size: 2.25rem;
+  font-weight: 700;
 }
 
 h2, .h2 {
@@ -51,12 +53,6 @@ h5, .h5 {
 
 p {
   font-size: 1rem;
-}
-
-@media (max-width: 575.98px) {
-  p {
-    font-size: 0.875rem;
-  }
 }
 
 /* Reset CSS */
@@ -299,28 +295,39 @@ img {
 
 .section-header__sub-title {
   color: #812bb2;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
+@media (max-width: 575.98px) {
+  .section-header__sub-title {
+    font-size: 1rem;
+  }
+}
+
 .section-header__title {
-  font-size: 2.5rem;
-  max-width: 37.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 3.125rem;
+  max-width: 43.75rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .section-header__title {
-    font-size: 1.875rem;
+    font-size: 2.1875rem;
   }
 }
 
 @media (max-width: 575.98px) {
   .section-header__title {
-    font-size: 1.625rem;
+    font-size: 1.75rem;
   }
 }
 
+/* Match Block Height Style */
 .match-height > [class*="col"] {
   display: -webkit-box;
   display: -webkit-flex;
@@ -351,6 +358,13 @@ img {
      -moz-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+/* Zikzak Section Style */
+@media (min-width: 992px) {
+  .section-zikzak > [class*="col"]:nth-of-type(2n) > [class*="card"] {
+    margin-top: 2.5rem;
+  }
 }
 
 /* Common Transition Style */
@@ -447,7 +461,7 @@ img {
   padding: 0.625rem 0 0.625rem;
 }
 
-.header .navbar-brand__logo {
+.header .navbar-brand__image {
   max-height: 3.75rem;
 }
 
@@ -539,7 +553,7 @@ img {
             justify-content: center;
     width: 50%;
     height: 100vh;
-    background-color: #f7f7f7;
+    background-color: #f7f8fa;
     -webkit-transition: -webkit-transform ease-in-out .3s;
     transition: -webkit-transform ease-in-out .3s;
     -o-transition: -o-transform ease-in-out .3s;
@@ -645,8 +659,8 @@ img {
 }
 
 .header .navbar .nav-link {
-  color: #666666;
-  font-size: 1rem;
+  color: #69778c;
+  font-size: 1.125rem;
   font-weight: 400;
   font-family: "DM Sans", sans-serif;
   padding-left: 0.9375rem;
@@ -769,22 +783,40 @@ img {
   opacity: 1;
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .offCanvasMenuCloser {
     display: block;
   }
 }
 
 /* Footer Section Style */
+.footer {
+  padding: 3.125rem 0;
+  background-color: #0d1943;
+}
+
+.footer-brand__image {
+  max-height: 3.125rem;
+}
+
 .footer__copyright {
-  color: unset;
+  color: #ffffff;
   font-size: 0.875rem;
 }
 
 .footer__copyright__link:hover, .footer__copyright__link:focus {
-  color: unset;
+  text-decoration: underline;
 }
 
+.footer-nav__link {
+  color: #ffffff !important;
+}
+
+.footer-nav__link:hover, .footer-nav__link:focus {
+  text-decoration: underline;
+}
+
+/* Main Banner Section Style */
 .banner {
   padding: 0;
 }
@@ -826,36 +858,141 @@ img {
 }
 
 .banner__content__title {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0.9375rem 0;
   text-transform: capitalize;
 }
 
+.banner__content__text {
+  color: #69778c;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Sub Banner Section Style */
+.sub-banner {
+  padding: 6.25rem 0;
+}
+
 .services__card {
-  padding: 2.5rem 0.9375rem;
+  padding: 5rem 2.1875rem;
   margin-bottom: 1.875rem;
-  border: 1px solid #e4e8f1;
+  background-color: #f7f8fa;
+}
+
+@media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+  .services__card {
+    padding: 3.75rem 1.25rem;
+  }
 }
 
 .services__card__icon {
-  width: 7.5rem;
-  height: 7.5rem;
-  line-height: 7.5rem;
-  border-radius: 50%;
-  border: 1px solid #f2f1f6;
-  background-color: #f7f7f7;
+  margin-bottom: 2.25rem;
 }
 
 .services__card__icon__image {
-  max-height: 3.4375rem;
+  max-height: 3.75rem;
 }
 
 .services__card__title {
-  margin-top: 0.625rem;
+  font-size: 2.125rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
   margin-bottom: 0.9375rem;
 }
 
+@media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+  .services__card__title {
+    font-size: 1.75rem;
+  }
+}
+
 .services__card__text {
-  color: #666666;
+  color: #69778c;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.667em;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+  .services__card__text {
+    font-size: 1rem;
+  }
+}
+
+.steps {
+  counter-reset: step-number;
+}
+
+.steps__card {
+  counter-increment: step-number;
+  text-align: center;
+  padding: 2.5rem 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+@media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+  .steps__card {
+    padding: 2.5rem 0.9375rem;
+  }
+}
+
+.steps__card__counter {
+  position: relative;
+  width: 6.25rem;
+  height: 6.25rem;
+  line-height: 6.25rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.25rem;
+  background-color: #0d1943;
+}
+
+@media (max-width: 1199.98px) {
+  .steps__card__counter {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.875rem;
+  }
+}
+
+.steps__card__counter::after {
+  content: counter(step-number);
+}
+
+.steps__card__title {
+  font-size: 2.125rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0.9375rem;
+}
+
+@media (max-width: 1199.98px) {
+  .steps__card__title {
+    font-size: 1.75rem;
+  }
+}
+
+.steps__card__text {
+  color: #69778c;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.667em;
+  margin-bottom: 0;
+}
+
+.steps__card .btn {
+  margin-top: 1.25rem;
+}
+
+.section-zikzak > [class*="col"]:nth-of-type(2n) .steps__card .steps__card__counter {
+  background-color: #812bb2;
 }
 /*# sourceMappingURL=style.css.map */

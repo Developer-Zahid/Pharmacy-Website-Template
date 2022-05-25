@@ -1,25 +1,35 @@
 .services{
     &__card{
-        padding: toRem(40) toRem(15);
+        padding: toRem(80) toRem(35);
         margin-bottom: toRem(30);
-        border: 1px solid #e4e8f1;
+        background-color: $color-white-soft;
+        @media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+            padding: toRem(60) toRem(20);
+        }
         &__icon{
-            width: toRem(120);
-            height: toRem(120);
-            line-height: toRem(120);
-            border-radius: 50%;
-            border: 1px solid #f2f1f6;
-            background-color: darken($color-white, $amount: 3);
+            margin-bottom: toRem(36);
             &__image{
-                max-height: toRem(55);
+                max-height: toRem(60);
             }
         }
         &__title{
-            margin-top: toRem(10);
+            font-size: toRem(34);
+            @media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+                font-size: toRem(28);
+            }
+            font-weight: 700;
+            font-family: $font-secondary;
             margin-bottom: toRem(15);
         }
         &__text{
             color: $color-gray;
+            font-size: toRem(18);
+            @media screen and (max-width: 575.98px), (min-width: 992px) and (max-width: 1200px) {
+                font-size: toRem(16);
+            }
+            font-weight: 500;
+            line-height: 1.667em;
+            margin-bottom: 0;
         }
     }
 }
