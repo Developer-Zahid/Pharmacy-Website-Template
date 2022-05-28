@@ -1,6 +1,6 @@
 /* 
 ------------------
-Template Name: Name | Type
+Template Name: Pharmacy Files | Pharmacy Type Website
 Version: 1.00
 ------------------
 
@@ -137,6 +137,16 @@ img {
 
 .list-inline-item {
   font-size: 1rem;
+}
+
+.form-group-label {
+  display: block;
+  margin-bottom: 0;
+}
+
+.form-group-label__text {
+  display: block;
+  margin-bottom: .5rem;
 }
 
 /* Custom Container Style */
@@ -367,6 +377,41 @@ img {
   }
 }
 
+.full-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Password Toggler Style */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .form-control {
+  padding-right: 38px;
+}
+
+.password-toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 2px 0.625rem;
+  background-color: transparent;
+  border: 0;
+}
+
 /* Common Transition Style */
 .slick__arrows, .slick-dots li button, .btn, .scroll-top__btn, .header, .header .navbar-toggler, .header .navbar-toggler__icon, .header .navbar .nav-item .dropdown-menu, .header .navbar .nav-item .dropdown-item, .header .navbar .nav-link, .footer__copyright__link {
   -webkit-transition: all linear .3s;
@@ -450,6 +495,72 @@ img {
 
 .scroll-top__btn:active {
   background-color: #0d1943;
+}
+
+/* Modals Style */
+.modal-content {
+  border: 0;
+  -webkit-box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.05);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(30%, -30%);
+     -moz-transform: translate(30%, -30%);
+      -ms-transform: translate(30%, -30%);
+       -o-transform: translate(30%, -30%);
+          transform: translate(30%, -30%);
+  margin: 0;
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 0.4375rem;
+  text-align: center;
+  font-size: 0.875rem;
+  z-index: 2;
+  opacity: 1 !important;
+  text-shadow: none;
+  color: #ffffff !important;
+  background-color: #812bb2 !important;
+  -webkit-box-shadow: 0 0.9375em 1.25em -0.3125em rgba(129, 43, 178, 0.4);
+          box-shadow: 0 0.9375em 1.25em -0.3125em rgba(129, 43, 178, 0.4);
+  -webkit-transition: all .23s ease .1s;
+  -o-transition: all .23s ease .1s;
+  -moz-transition: all .23s ease .1s;
+  transition: all .23s ease .1s;
+}
+
+.modal-close:hover {
+  background-color: #e93234 !important;
+  -webkit-transform: translate(10%, -10%);
+     -moz-transform: translate(10%, -10%);
+      -ms-transform: translate(10%, -10%);
+       -o-transform: translate(10%, -10%);
+          transform: translate(10%, -10%);
+}
+
+@media (max-width: 575.98px) {
+  .modal-body {
+    padding: 3.125rem 1.25rem 1.875rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-body {
+    padding: 3.75rem 3.75rem 3.125rem;
+  }
+}
+
+.modal-backdrop {
+  background-color: #0d1943;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8;
 }
 
 /* Header Section Style */
@@ -871,7 +982,7 @@ img {
 
 /* Sub Banner Section Style */
 .sub-banner {
-  padding: 6.25rem 0;
+  padding: 12.5rem 0;
 }
 
 .services__card {

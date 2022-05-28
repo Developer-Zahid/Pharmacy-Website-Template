@@ -1,0 +1,46 @@
+/* Modals Style */
+.modal{
+    &-content{
+        border: 0;
+        box-shadow: 0 0 toRem(10) rgba($color-black, $alpha: 0.05);
+    }
+    &-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(30%, -30%);
+        margin: 0;
+        display: inline-block;
+        width: toRem(40);
+        height: toRem(40);
+        line-height: toRem(40);
+        border-radius: toRem(7);
+        text-align: center;
+        font-size: toRem(14);
+        z-index: 2;
+        opacity: 1 !important;
+        text-shadow: none;
+        color: $color-white !important;
+        background-color: $color-primary !important;
+		box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-primary, $alpha: 0.4);
+        transition: all .23s ease .1s;
+        &:hover{
+            background-color: $color-danger !important;
+            transform: translate(10%, -10%);
+        }
+    }
+    &-body{
+        @include mobile{
+            padding: toRem(50) toRem(20) toRem(30);
+        }
+        @include min-mobile{
+            padding: toRem(60) toRem(60) toRem(50);
+        }
+    }
+    &-backdrop{
+        background-color: $color-secondary;
+        &.show{
+            opacity: 0.8;
+        }
+    }
+}

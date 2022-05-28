@@ -69,6 +69,15 @@ img{
 	}
 }
 
+.form-group-label{
+	display: block;
+	margin-bottom: 0;
+	&__text{
+		display: block;
+		margin-bottom: .5rem;
+	}
+}
+
 /* Custom Container Style */
 .container{
 	@include min-desktop-lg{
@@ -241,5 +250,30 @@ img{
 .section-zikzak > [class*="col"]:nth-of-type(2n) > [class*="card"]{
 	@include min-desktop{
 		margin-top: toRem(40);
+	}
+}
+
+.full-page{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Password Toggler Style */
+.password{
+	&-wrapper{
+		position: relative;
+		.form-control{
+			padding-right: 38px;
+		}
+	}
+	&-toggler{
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 2px toRem(10);
+		background-color: transparent;
+		border: 0;
 	}
 }

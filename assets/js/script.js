@@ -67,6 +67,20 @@
         $("html").removeClass("overflow-hidden");
     });
 
+	/* Password Toggler function */
+	$(".password-toggler").on("click", function(){
+		let passwordInput = $(this).closest(".password-wrapper").find(".form-control");
+		let passwordIcon = $(this).find("i");
+		let currentInputType = passwordInput.attr("type");
+		if(currentInputType == "password"){
+			passwordInput.attr("type", "text");
+			passwordIcon.attr("class", "bi bi-eye-slash-fill")
+		}else{
+			passwordInput.attr("type", "password");
+			passwordIcon.attr("class", "bi bi-eye-fill")
+		}
+	});
+
     /*  Banner slider */
     // $(".banner__slider").slick({
     //     slidesToShow: 1,
