@@ -69,15 +69,6 @@ img{
 	}
 }
 
-.form-group-label{
-	display: block;
-	margin-bottom: 0;
-	&__text{
-		display: block;
-		margin-bottom: .5rem;
-	}
-}
-
 /* Custom Container Style */
 .container{
 	@include min-desktop-lg{

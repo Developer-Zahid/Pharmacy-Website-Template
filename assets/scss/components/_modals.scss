@@ -1,5 +1,11 @@
 /* Modals Style */
 .modal{
+    &-dialog{
+        @include mobile{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
     &-content{
         border: 0;
         box-shadow: 0 0 toRem(10) rgba($color-black, $alpha: 0.05);
@@ -26,6 +32,7 @@
         transition: all .23s ease .1s;
         &:hover{
             background-color: $color-danger !important;
+            box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-danger, $alpha: 0.4);
             transform: translate(10%, -10%);
         }
     }

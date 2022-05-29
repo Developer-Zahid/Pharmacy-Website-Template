@@ -2,9 +2,15 @@
 .header{
 	position: absolute;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 9;
 	background-color: transparent;
 	padding: toRem(10) 0 toRem(10);
+	transition:
+		box-shadow .3s linear,
+		background-color .3s linear,
+		transform .3s linear;
 	@extend %transition;
 	.navbar{
 		&-brand{
@@ -183,6 +189,10 @@
 		box-shadow: 0 3px 18px rgba($color-black, $alpha: 0.12);
 		animation: header_in .4s linear forwards;
 	}
+}
+
+.modal-open .header{
+	right: 17px;
 }
 
 /* Fixed Header animation */

@@ -69,3 +69,13 @@
 		}
 	}
 }
+
+.password-toggler{
+	color: $color-primary;
+	transition: all .2s ease-in-out;
+	&:hover,
+	&:focus-visible
+	{
+		color: $color-secondary;
+	}
+}

@@ -139,16 +139,6 @@ img {
   font-size: 1rem;
 }
 
-.form-group-label {
-  display: block;
-  margin-bottom: 0;
-}
-
-.form-group-label__text {
-  display: block;
-  margin-bottom: .5rem;
-}
-
 /* Custom Container Style */
 @media (min-width: 1200px) {
   .container {
@@ -497,7 +487,26 @@ img {
   background-color: #0d1943;
 }
 
+.password-toggler {
+  color: #812bb2;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.password-toggler:hover, .password-toggler:focus-visible {
+  color: #0d1943;
+}
+
 /* Modals Style */
+@media (max-width: 575.98px) {
+  .modal-dialog {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 .modal-content {
   border: 0;
   -webkit-box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.05);
@@ -536,6 +545,8 @@ img {
 
 .modal-close:hover {
   background-color: #e93234 !important;
+  -webkit-box-shadow: 0 0.9375em 1.25em -0.3125em rgba(233, 50, 52, 0.4);
+          box-shadow: 0 0.9375em 1.25em -0.3125em rgba(233, 50, 52, 0.4);
   -webkit-transform: translate(10%, -10%);
      -moz-transform: translate(10%, -10%);
       -ms-transform: translate(10%, -10%);
@@ -563,13 +574,95 @@ img {
   opacity: 0.8;
 }
 
+.form-group-label {
+  display: block;
+  margin-bottom: 0;
+}
+
+.form-group-label__text {
+  color: #768498;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.form-control {
+  border-color: #dce0e5;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #bfc5cf;
+  text-shadow: none;
+}
+
+.form-control:-moz-placeholder {
+  color: #bfc5cf;
+  text-shadow: none;
+}
+
+.form-control::-moz-placeholder {
+  color: #bfc5cf;
+  text-shadow: none;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #bfc5cf;
+  text-shadow: none;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #bfc5cf;
+  text-shadow: none;
+}
+
+.form-control::placeholder {
+  color: #bfc5cf;
+  text-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #812bb2;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #812bb2;
+  border-color: #812bb2;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background-color: rgba(129, 43, 178, 0.5);
+  border-color: rgba(129, 43, 178, 0.5);
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #812bb2;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(129, 43, 178, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(129, 43, 178, 0.25);
+}
+
+.custom-control-label {
+  cursor: pointer;
+}
+
 /* Header Section Style */
 .header {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 9;
   background-color: transparent;
   padding: 0.625rem 0 0.625rem;
+  -webkit-transition: background-color .3s linear, -webkit-box-shadow .3s linear, -webkit-transform .3s linear;
+  transition: background-color .3s linear, -webkit-box-shadow .3s linear, -webkit-transform .3s linear;
+  -o-transition: box-shadow .3s linear, background-color .3s linear, -o-transform .3s linear;
+  -moz-transition: box-shadow .3s linear, background-color .3s linear, transform .3s linear, -moz-transform .3s linear;
+  transition: box-shadow .3s linear, background-color .3s linear, transform .3s linear;
+  transition: box-shadow .3s linear, background-color .3s linear, transform .3s linear, -webkit-box-shadow .3s linear, -webkit-transform .3s linear, -moz-transform .3s linear, -o-transform .3s linear;
 }
 
 .header .navbar-brand__image {
@@ -814,6 +907,10 @@ img {
      -moz-animation: header_in .4s linear forwards;
        -o-animation: header_in .4s linear forwards;
           animation: header_in .4s linear forwards;
+}
+
+.modal-open .header {
+  right: 17px;
 }
 
 /* Fixed Header animation */

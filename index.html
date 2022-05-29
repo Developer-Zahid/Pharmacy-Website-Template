@@ -22,7 +22,7 @@
 </head>
 <body>
 	<!-- Header Section -->
-	<header class="header w-100">
+	<header class="header">
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
 				<a class="navbar-brand" href="./">
@@ -44,7 +44,7 @@
 					</ul>
 					<ul class="navbar-nav text-center align-items-center">
 						<li class="nav-item">
-							<a class="btn btn--transparent btn--transparent--primary" href="#!">Login</a>
+							<button type="button" class="btn btn--transparent btn--transparent--primary" data-toggle="modal" data-target="#loginModal">Login</button>
 						</li>
 						<li class="nav-item">
 							<button type="button" class="btn" data-toggle="modal" data-target="#registerModal">Register</button>
@@ -227,7 +227,7 @@
 	</footer>
 
 	<!-- Register Modal -->
-	<div class="modal fade " id="registerModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+	<div class="modal fade" id="registerModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 				<button type="button" class="modal-close close" data-dismiss="modal" aria-label="Close">
@@ -247,8 +247,8 @@
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label class="form-group-label">
-										<span class="form-group-label__text">last Name <span class="text-danger">*</span></span>
-										<input type="text" class="form-control" required>
+										<span class="form-group-label__text">last Name</span>
+										<input type="text" class="form-control">
 									</label>
 								</div>
 							</div>
@@ -264,11 +264,11 @@
 								<div class="form-group">
 									<label class="form-group-label">
 										<span class="form-group-label__text">Email <span class="text-danger">*</span></span>
-										<input type="email" class="form-control" required>
+										<input type="email" class="form-control" placeholder="demo@demo.com" required>
 									</label>
 								</div>
 							</div>
-							<div class="col-12">
+							<div class="col-lg-6">
 								<div class="form-group">
 									<label class="form-group-label">
 										<span class="form-group-label__text">Password</span>
@@ -281,7 +281,7 @@
 									</label>
 								</div>
 							</div>
-							<div class="col-12">
+							<div class="col-lg-6">
 								<div class="form-group">
 									<label class="form-group-label">
 										<span class="form-group-label__text">Re-enter Password</span>
@@ -307,10 +307,49 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-12 mt-3">
+								<button type="submit" class="btn">Sign Up</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Log In Modal -->
+	<div class="modal fade" id="loginModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="modal-close close" data-dismiss="modal" aria-label="Close">
+					<i class="bi bi-x-lg"></i>
+				</button>
+				<div class="modal-body">
+					<form action="#!" class="form">
+						<div class="form-row">
 							<div class="col-12">
-								<button type="submit" class="btn">
-									Sign Up
-								</button>
+								<div class="form-group">
+									<label class="form-group-label">
+										<span class="form-group-label__text">Email <span class="text-danger">*</span></span>
+										<input type="email" class="form-control" placeholder="demo@demo.com" required>
+									</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label class="form-group-label">
+										<span class="form-group-label__text">Password</span>
+										<div class="password-wrapper">
+											<input type="password" class="form-control">
+											<button type="button" class="password-toggler">
+												<i class="bi bi-eye-fill"></i>
+											</button>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-12 mt-3">
+								<button type="submit" class="btn w-100">Login</button>
 							</div>
 						</div>
 					</form>
