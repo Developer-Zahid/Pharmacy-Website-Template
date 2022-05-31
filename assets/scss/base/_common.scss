@@ -58,6 +58,10 @@ img{
 	object-fit: cover;
 }
 
+hr{
+	border-color: lighten($color-gray, $amount: 20);
+}
+
 .user-select-none{
 	pointer-events: none;
 }
@@ -78,93 +82,49 @@ img{
 
 /* Common Slick Style */
 .slick{
-	&__arrows{
-		top: 0;
-		position: absolute;
-		z-index: 3;
-		width: toRem(40);
-		height: toRem(40);
-		color: unset;
-		background-color: unset;
-		font-size: toRem(20);
-		text-align: center;
-		cursor: pointer;
-		@extend %transition;
-		&--left{
-			right: 0;
-		}
-		&--right{
-			right: 0;
-		}
-		&:hover,
-		&:focus-visible{
-			color: unset;
-			background-color: unset;
-		}
-	}
 	&-dots{
-		display: flex;
+		display: inline-flex;
 		justify-content: center;
 		margin-bottom: 0;
 		line-height: 0;
+		background-color: $color-primary;
+		padding: toRem(15) toRem(30);
+		border-radius: 10rem;
+		position: absolute;
+		@include min-desktop-15{
+			top: 50%;
+			right: 0;
+			transform: translate(250%, -50%);
+			flex-direction: column;
+			padding: toRem(35) toRem(15);
+		}
+		@include desktop-15{
+			top: 100%;
+			transform: translateY(50%);
+		}
 		li{
 			&:not(:last-child){
-				margin-right: 1rem;
+				@include desktop-15{
+					margin-right: toRem(10);
+				}
+				@include min-desktop-15{
+					margin-bottom: toRem(10);
+				}
 			}
 			button{
 				font-size: 0;
-				width: toRem(8);
-				height: toRem(8);
-				background: $color-primary;
-				border: 1px solid $color-primary;
-				border-radius: toRem(8);
+				width: toRem(12);
+				height: toRem(12);
+				background: rgba($color-white, $alpha: 0.5);
+				border: 0;
+				border-radius: toRem(12);
 				@extend %transition;
 			}
 			&.slick-active{
 				button{
-					width: toRem(16);
-					background: transparent;
+					background: $color-white;
 				}
 			}
-		}
-	}
-}
-
-/* Veno Box Style */
-.vbox{
-	&-close{
-		top: 2%;
-		right: 2%;
-		width: 4rem;
-		height: 4rem;
-		border-radius: 50%;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 3rem;
-		background: $color-primary !important;
-		color: $color-white !important;
-	}
-	&-preloader .sk{
-		&-child,
-		&-rect,
-		&-cube,
-		&-spinner,
-		&-rotating-plane{
-			background: $color-primary !important;
-		}
-	}
-	&-next,
-	&-prev{
-		width: 3rem;
-		height: 3rem;
-		span{
-			width: 2rem;
-			height: 2rem;
-			border-width: 4px;
-			border-top-color: $color-primary !important;
-			border-right-color: $color-primary !important;
 		}
 	}
 }
@@ -248,23 +208,4 @@ img{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-}
-
-/* Password Toggler Style */
-.password{
-	&-wrapper{
-		position: relative;
-		.form-control{
-			padding-right: 38px;
-		}
-	}
-	&-toggler{
-		position: absolute;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		padding: 2px toRem(10);
-		background-color: transparent;
-		border: 0;
-	}
 }

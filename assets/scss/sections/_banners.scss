@@ -1,41 +1,122 @@
 /* Main Banner Section Style */
 .banner{
-    padding: 0;
-    &__wrapper{
-        height: toRem(400);
-        z-index: -1;
-        &__image{
-            top: 0;
-            left: 0;
-            object-fit: cover;
-        }
+    padding: toRem(50) 0;
+    @include desktop{
+        padding-top: 0;
     }
     &__content{
-        max-width: toRem(800);
-        padding: toRem(50) toRem(30);
-        background-color: $color-white;
-        border: 1px solid #f2f1f6;
-        @include min-desktop{
-            margin-top: toEm(-50);
-            box-shadow: 0 35px 40px 0 rgba(36, 49, 160, 0.06);
-            border-radius: toRem(10);
+        padding: toRem(100) 0;
+        @include desktop{
+            padding: toRem(50) 0;
         }
-        &__icon{
-            width: toRem(100);
-            height: toRem(100);
-            line-height: toRem(100);
-            border: 1px solid #f2f1f6;
-            background-color: darken($color-white, $amount: 3);
+    }
+    &__badge{
+        display: inline-block;
+        padding: toRem(8) toRem(18);
+        background-color: darken($color-white-soft, $amount: 5);
+    }
+    &__title{
+        font-size: toRem(60);
+        @include tablet{
+            font-size: toRem(40);
         }
-        &__title{
-            font-family: $font-secondary;
-            margin: toRem(15) 0;
-            text-transform: capitalize;
-        }
-        &__text{
-            color: $color-gray;
+        font-family: $font-secondary;
+        margin: toRem(15) 0;
+        text-transform: capitalize;
+    }
+    &__text{
+        color: $color-gray;
+        @include min-mobile{
             font-size: toRem(18);
-            font-weight: 500;
+        }
+        font-weight: 500;
+    }
+    &__form{
+        display: flex;
+        max-width: toRem(600);
+        box-shadow: 0 1px 60px 0 rgba(0,0,0,.1);
+        margin-top: toRem(40);
+        @include mobile{
+            flex-direction: column;
+        }
+        &__input{
+            flex-grow: 1;
+            font-size: toRem(18);
+            font-weight: 600;
+            padding: toRem(20) toRem(30);
+            background-color: $color-white;
+            border: 0;
+            @include min-mobile{
+                border-right: 1px solid $color-primary;
+            }
+        }
+        &__btn{
+            flex-shrink: 0;
+            color: $color-white;
+            font-size: toRem(18);
+            font-weight: 700;
+            background-color: $color-primary;
+            padding: toRem(5) toRem(40);
+            border: 0;
+            transition: all .2s ease-in-out;
+            @include mobile{
+                padding: toRem(15);
+            }
+            &:active{
+                color: $color-primary;
+                background-color: $color-white;
+                padding-left: toRem(45);
+                padding-right: toRem(45);
+            }
+            @include min-mobile{
+                &:focus,
+                &:hover
+                {
+                    color: $color-primary;
+                    background-color: $color-white;
+                    padding-left: toRem(45);
+                    padding-right: toRem(45);
+                }
+            }
+        }
+    }
+    &__slider-wrapper{
+        position: relative;
+        padding: toRem(50) 0;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 50%;
+            background-color: rgba($color-primary, $alpha: 0.4);
+        }
+    }
+    &__slide{
+        padding-right: toRem(50);
+        @include mobile{
+            padding-right: toRem(20);
+        }
+        &__content{
+            position: relative;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            min-height: toRem(450);
+            overflow: hidden;
+            &__image{
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: rotateY(-25deg);
+                transform-origin: right;
+                width: 120%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                outline: 1px solid transparent;
+            }
         }
     }
 }
@@ -43,4 +124,16 @@
 /* Sub Banner Section Style */
 .sub-banner{
     padding: toRem(200) 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: var(--background-image), linear-gradient(transparent, rgba($color-secondary, $alpha: 0.5));
+    background-blend-mode: darken;
+    &__title{
+        @include min-desktop{
+            font-size: toRem(55);
+        }
+        color: $color-white;
+        text-shadow: 2px 2px 0 $color-secondary;
+    }
 }

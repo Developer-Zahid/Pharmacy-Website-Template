@@ -70,6 +70,10 @@
 	}
 }
 
+.modal-open .scroll-top{
+	right: calc(var(--scrollbarWidth, 0px) + 15px);
+}
+
 .password-toggler{
 	color: $color-primary;
 	transition: all .2s ease-in-out;

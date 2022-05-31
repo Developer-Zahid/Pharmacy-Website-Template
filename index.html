@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Site Meta Data -->
-    <meta name="author" content="Developer Zahid | Zahid Hasan Munna">
-    <meta name="description" content="My name is Zahid Hasan Munna. I'm a Front-End Developer. I created these...">
-    <meta name="keywords" content="frontend developer, frontend designer, web designer, developer, designer, dev-z">
+    <meta name="author" content="Pharmacy Files">
+    <meta name="description" content="designed for patient focused care">
+    <meta name="keywords" content="patient, care, pharmacy, pharmacy files, pharmacy-files">
 	<!-- Site Title -->
 	<title>Pharmacy Files | Designed for Patient-Focused Care</title>
 	<!-- Favicon Link -->
@@ -18,7 +18,9 @@
 	<link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico">
 	<!-- All CSS -->
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/plugins/slick-slider/css/slick.css">
+	<link rel="stylesheet" href="./assets/plugins/aos/css/aos.css">
+	<link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 <body>
 	<!-- Header Section -->
@@ -61,16 +63,36 @@
 	<section class="banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-12">
-					<div class="banner__wrapper position-relative">
-						<img src="./assets/images/banners/banner.jpg" alt="banner" class="banner__wrapper__image position-absolute w-100 h-100">
+				<div class="col-xl-7 col-lg-6">
+					<div class="banner__content">
+						<b class="banner__badge">Pharmacy</b>
+						<h1 class="banner__title">Pharmacy Files</h1>
+						<p class="banner__text">Pharmacy Files allow users to store and organize their clinical documentations of their patient care. It has document templates for users to clearly communicate their medication-related or drug-related problems (MRP/DRP) and recommendations.</p>
+						<form action="#!" class="form banner__form" data-aos="fade-up">
+							<input type="email" name="banner_email" class="banner__form__input" placeholder="Enter Your Email Address" required>
+							<button type="submit" class="banner__form__btn">Get A quote</button>
+						</form>
 					</div>
-					<div class="banner__content mx-auto text-center">
-						<div class="banner__content__icon text-center rounded-circle mx-auto">
-							<img src="./assets/images/logo/favicon.png" alt="logo icon">
+				</div>
+				<div class="col-xl-5 col-lg-6">
+					<div class="banner__slider-wrapper">
+						<div class="banner__slider">
+							<div class="banner__slide">
+								<div class="banner__slide__content">
+									<div class="banner__slide__content__image" style="background-image: url(./assets/images/banners/banner.jpg);"></div>
+								</div>
+							</div>
+							<div class="banner__slide">
+								<div class="banner__slide__content">
+									<div class="banner__slide__content__image" style="background-image: url(./assets/images/banners/about-us-top-banner.jpg);"></div>
+								</div>
+							</div>
+							<div class="banner__slide">
+								<div class="banner__slide__content">
+									<div class="banner__slide__content__image" style="background-image: url(./assets/images/banners/about-us-bottom-banner.jpg);"></div>
+								</div>
+							</div>
 						</div>
-						<h1 class="banner__content__title">Pharmacy Files</h1>
-						<p class="banner__content__text">Pharmacy Files allow users to store and organize their clinical documentations of their patient care. It has document templates for users to clearly communicate their medication-related or drug-related problems (MRP/DRP) and recommendations.</p>
 					</div>
 				</div>
 			</div>
@@ -87,7 +109,7 @@
 						<h1 class="section-header__title">Experienced in multiple medical practices</h1>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up">
 					<div class="services__card">
 						<div class="services__card__icon">
 							<img src="./assets/images/icons/medicine.png" alt="icons" class="services__card__icon__image">
@@ -96,7 +118,7 @@
 						<p class="services__card__text">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit massa aenean orci erat pellentesque arcu.</p>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="services__card">
 						<div class="services__card__icon">
 							<img src="./assets/images/icons/task.png" alt="icons" class="services__card__icon__image">
@@ -105,7 +127,7 @@
 						<p class="services__card__text">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit massa aenean orci erat pellentesque arcu.</p>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
 					<div class="services__card">
 						<div class="services__card__icon">
 							<img src="./assets/images/icons/medical-history.png" alt="icons" class="services__card__icon__image">
@@ -114,7 +136,7 @@
 						<p class="services__card__text">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit massa aenean orci erat pellentesque arcu.</p>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up">
 					<div class="services__card">
 						<div class="services__card__icon">
 							<img src="./assets/images/icons/ambulance.png" alt="icons" class="services__card__icon__image">
@@ -123,7 +145,7 @@
 						<p class="services__card__text">Lorem ipsum dolor sit amet, amet consectetur adipiscing elit massa aenean orci erat pellentesque arcu.</p>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="services__card">
 						<div class="services__card__icon">
 							<img src="./assets/images/icons/information.png" alt="icons" class="services__card__icon__image">
@@ -148,49 +170,49 @@
 				</div>
 			</div>
 			<div class="row section-zikzak">
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up">
 					<div class="steps__card">
-						<div class="steps__card__counter"></div>
+						<div class="steps__card__counter" data-aos="zoom-in"></div>
 						<h3 class="steps__card__title">Download our app</h3>
 						<p class="steps__card__text">Eget id suspendisse consequat risus eu pretium platea leo at ut sed cras sagittis pellentesque interdum natoque aliquet viverra.</p>
 						<a href="#!" class="btn">Download</a>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="steps__card">
-						<div class="steps__card__counter"></div>
+						<div class="steps__card__counter" data-aos="zoom-in"></div>
 						<h3 class="steps__card__title">Create an account</h3>
 						<p class="steps__card__text">Eget id suspendisse consequat risus eu pretium platea leo at ut sed cras sagittis pellentesque interdum natoque aliquet viverra.</p>
 						<a href="#!" class="btn">Download</a>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
 					<div class="steps__card">
-						<div class="steps__card__counter"></div>
+						<div class="steps__card__counter" data-aos="zoom-in"></div>
 						<h3 class="steps__card__title">Start take service</h3>
 						<p class="steps__card__text">Eget id suspendisse consequat risus eu pretium platea leo at ut sed cras sagittis pellentesque interdum natoque aliquet viverra.</p>
 						<a href="#!" class="btn">Download</a>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up">
 					<div class="steps__card">
-						<div class="steps__card__counter"></div>
+						<div class="steps__card__counter" data-aos="zoom-in"></div>
 						<h3 class="steps__card__title">Create an account</h3>
 						<p class="steps__card__text">Eget id suspendisse consequat risus eu pretium platea leo at ut sed cras sagittis pellentesque interdum natoque aliquet viverra.</p>
 						<a href="#!" class="btn">Download</a>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="steps__card">
-						<div class="steps__card__counter"></div>
+						<div class="steps__card__counter" data-aos="zoom-in"></div>
 						<h3 class="steps__card__title">Start take service</h3>
 						<p class="steps__card__text">Eget id suspendisse consequat risus eu pretium platea leo at ut sed cras sagittis pellentesque interdum natoque aliquet viverra.</p>
 						<a href="#!" class="btn">Download</a>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
 					<div class="steps__card">
-						<div class="steps__card__counter"></div>
+						<div class="steps__card__counter" data-aos="zoom-in"></div>
 						<h3 class="steps__card__title">Download our app</h3>
 						<p class="steps__card__text">Eget id suspendisse consequat risus eu pretium platea leo at ut sed cras sagittis pellentesque interdum natoque aliquet viverra.</p>
 						<a href="#!" class="btn">Download</a>
@@ -234,13 +256,16 @@
 					<i class="bi bi-x-lg"></i>
 				</button>
 				<div class="modal-body">
-					<form action="#!" class="form">
+					<form action="#!" class="form needs-validation" novalidate>
 						<div class="form-row">
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label class="form-group-label">
 										<span class="form-group-label__text">First Name <span class="text-danger">*</span></span>
-										<input type="text" class="form-control" required>
+										<input type="text" class="form-control" name="register_name" required>
+										<div class="invalid-tooltip">
+											Please provide name.
+										</div>
 									</label>
 								</div>
 							</div>
@@ -256,27 +281,9 @@
 								<div class="form-group">
 									<label class="form-group-label">
 										<span class="form-group-label__text">Telephone <span class="text-danger">*</span></span>
-										<input type="tel" class="form-control" required>
-									</label>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<label class="form-group-label">
-										<span class="form-group-label__text">Email <span class="text-danger">*</span></span>
-										<input type="email" class="form-control" placeholder="demo@demo.com" required>
-									</label>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<label class="form-group-label">
-										<span class="form-group-label__text">Password</span>
-										<div class="password-wrapper">
-											<input type="password" class="form-control">
-											<button type="button" class="password-toggler">
-												<i class="bi bi-eye-fill"></i>
-											</button>
+										<input type="tel" class="form-control" name="register_telephone" required>
+										<div class="invalid-tooltip">
+											Please provide telephone number.
 										</div>
 									</label>
 								</div>
@@ -284,12 +291,42 @@
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label class="form-group-label">
-										<span class="form-group-label__text">Re-enter Password</span>
+										<span class="form-group-label__text">Email <span class="text-danger">*</span></span>
+										<input type="email" class="form-control" name="register_email" placeholder="demo@demo.com" required>
+										<div class="invalid-tooltip">
+											Please provide valid email address.
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label class="form-group-label">
+										<span class="form-group-label__text">Password <span class="text-danger">*</span></span>
 										<div class="password-wrapper">
-											<input type="password" class="form-control">
+											<input type="password" class="form-control" name="register_password" required>
 											<button type="button" class="password-toggler">
 												<i class="bi bi-eye-fill"></i>
 											</button>
+											<div class="invalid-tooltip">
+												Please enter valid password.
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label class="form-group-label">
+										<span class="form-group-label__text">Re-enter Password <span class="text-danger">*</span></span>
+										<div class="password-wrapper">
+											<input type="password" class="form-control" name="register_re-password" required>
+											<button type="button" class="password-toggler">
+												<i class="bi bi-eye-fill"></i>
+											</button>
+											<div class="invalid-tooltip">
+												Please enter valid password.
+											</div>
 										</div>
 									</label>
 								</div>
@@ -298,17 +335,17 @@
 								<div class="form-group">
 									<span class="form-group-label__text">Are you a medical professional? <span class="text-danger">*</span></span>
 									<div class="custom-control custom-radio custom-control-inline">
-										<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-										<label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
-									  </div>
-									  <div class="custom-control custom-radio custom-control-inline">
-										<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-										<label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+										<input type="radio" id="professional_status_yes" name="register_professional_status" value="yes" class="custom-control-input" required>
+										<label class="custom-control-label" for="professional_status_yes">Yes</label>
+									</div>
+									<div class="custom-control custom-radio custom-control-inline">
+										<input type="radio" id="professional_status_no" name="register_professional_status" value="no" class="custom-control-input" required>
+										<label class="custom-control-label" for="professional_status_no">No</label>
 									</div>
 								</div>
 							</div>
-							<div class="col-12 mt-3">
-								<button type="submit" class="btn">Sign Up</button>
+							<div class="col-md-6 mx-auto mt-3">
+								<button type="submit" class="btn w-100">Sign Up</button>
 							</div>
 						</div>
 					</form>
@@ -325,25 +362,31 @@
 					<i class="bi bi-x-lg"></i>
 				</button>
 				<div class="modal-body">
-					<form action="#!" class="form">
+					<form action="#!" class="form needs-validation" novalidate>
 						<div class="form-row">
 							<div class="col-12">
 								<div class="form-group">
 									<label class="form-group-label">
 										<span class="form-group-label__text">Email <span class="text-danger">*</span></span>
-										<input type="email" class="form-control" placeholder="demo@demo.com" required>
+										<input type="email" class="form-control" placeholder="demo@demo.com" name="login_email" required>
+										<div class="invalid-tooltip">
+											Please provide valid email address.
+										</div>
 									</label>
 								</div>
 							</div>
 							<div class="col-12">
 								<div class="form-group">
 									<label class="form-group-label">
-										<span class="form-group-label__text">Password</span>
+										<span class="form-group-label__text">Password <span class="text-danger">*</span></span>
 										<div class="password-wrapper">
-											<input type="password" class="form-control">
+											<input type="password" class="form-control" name="login_password" required>
 											<button type="button" class="password-toggler">
 												<i class="bi bi-eye-fill"></i>
 											</button>
+											<div class="invalid-tooltip">
+												Please provide your password.
+											</div>
 										</div>
 									</label>
 								</div>
@@ -368,6 +411,8 @@
 	<!-- All Scripts -->
 	<script src="./assets/js/jquery-1.12.4.min.js"></script>
 	<script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./assets/plugins/slick-slider/js/slick.js"></script>
+	<script src="./assets/plugins/aos/js/aos.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 </html>

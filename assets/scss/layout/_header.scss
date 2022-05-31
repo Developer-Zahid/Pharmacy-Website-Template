@@ -192,7 +192,7 @@
 }
 
 .modal-open .header{
-	right: 17px;
+	right: var(--scrollbarWidth, 0px);
 }
 
 /* Fixed Header animation */

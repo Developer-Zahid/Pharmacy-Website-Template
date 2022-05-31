@@ -1,0 +1,61 @@
+/* About Section Style */
+.about{
+    &--bg{
+        background-color: $color-white-soft;
+    }
+    &__text{
+        @include min-tablet{
+            font-size: toRem(18);
+        }
+        @include min-desktop{
+            font-size: toRem(22);
+        }
+    }
+    &__list__item{
+        position: relative;
+        padding: toRem(30) 0;
+        &:first-child::before,
+        &::after
+        {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15%;
+            height: 1px;
+            background-color: $color-primary;
+        }
+        &:first-child::before{
+            top: 0;
+        }
+        &::after{
+            bottom: 0;
+        }
+        &__title{
+            @include tablet{
+                font-size: toRem(40);
+            }
+            @include mobile{
+                font-size: toRem(30);
+            }
+            @include min-tablet{
+                font-size: toRem(60);
+            }
+            font-family: $font-tertiary;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        &__text{
+            color: darken($color-white-soft, $amount: 50);
+            @include min-mobile{
+                font-size: toRem(18);
+            }
+        }
+    }
+    &-footer{
+        padding: toRem(200) 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

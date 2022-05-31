@@ -1,18 +1,22 @@
 .form{
-    &-group-label{
-        display: block;
-        margin-bottom: 0;
-        &__text{
-            color: lighten($color-gray, $amount: 5);
+    &-group{
+        position: relative;
+        &-label{
             display: block;
-            margin-bottom: .5rem;
+            margin-bottom: 0;
+            &__text{
+                color: lighten($color-gray, $amount: 5);
+                display: block;
+                margin-bottom: .5rem;
+            }
         }
     }
     &-control{
-        border-color: lighten($color-gray, $amount: 40);
+        border-color: lighten($color-gray, $amount: 35);
+        height: calc(2.5em + .75rem + 2px);
         box-shadow: none !important;
         &::placeholder{
-            color: lighten($color-gray, $amount: 30);
+            color: lighten($color-gray, $amount: 20);
             text-shadow: none;
         }
         &:focus{
@@ -21,9 +25,38 @@
     }
 }
 
-.custom-control-input:checked ~ .custom-control-label::before{
-    background-color: $color-primary;
+/* Password Toggler Style */
+.password{
+	&-wrapper{
+		position: relative;
+		.form-control{
+			padding-right: toRem(38);
+		}
+	}
+	&-toggler{
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 2px toRem(10);
+		background-color: transparent;
+		border: 0;
+	}
+}
+
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
+.custom-control-input.is-valid:checked ~ .custom-control-label::before,
+.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before
+{
     border-color: $color-primary;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input.is-valid:checked ~ .custom-control-label::before,
+.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before
+{
+    background-color: $color-primary;
 }
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before{
@@ -31,14 +64,65 @@
     border-color: rgba($color-primary, $alpha: 0.5);
 }
 
-.custom-control-input:focus:not(:checked) ~ .custom-control-label::before{
-    border-color: $color-primary;
-}
-
-.custom-control-input:focus ~ .custom-control-label::before {
+.custom-control-input:focus ~ .custom-control-label::before,
+.custom-control-input.is-valid:focus ~ .custom-control-label::before,
+.was-validated .custom-control-input:valid:focus ~ .custom-control-label::before
+{
     box-shadow: 0 0 0 .2rem rgba($color-primary, $alpha: 0.25);
 }
 
 .custom-control-label{
     cursor: pointer;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-control.is-valid,
+.was-validated .form-control:valid
+{
+    background-size: 0;
+    padding-right: .75rem;
+}
+
+.was-validated .password-wrapper .form-control:invalid,
+.was-validated .password-wrapper .form-control:valid
+{
+    padding-right: toRem(38);
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid,
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.custom-control-input.is-valid ~ .custom-control-label::before,
+.was-validated .custom-control-input:valid ~ .custom-control-label::before
+{
+    border-color: lighten($color-gray, $amount: 35);
+}
+
+.custom-control-input.is-valid ~ .custom-control-label,
+.was-validated .custom-control-input:valid ~ .custom-control-label
+{
+    color: $color-secondary;
+}
+
+.submission-status{
+    color: $color-white;
+    @include min-tablet{
+        font-size: toRem(18);
+    }
+    font-weight: 700;
+    text-align: center;
+    padding: toRem(20) toRem(25);
+    max-width: toRem(500);
+    margin: toRem(30) auto;
+    border-radius: toRem(7);
+    &--success{
+        background-color: $color-success;
+        box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-success, $alpha: 0.4);
+    }
+    &--danger{
+        background-color: $color-danger;
+        box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-danger, $alpha: 0.4);
+    }
 }
