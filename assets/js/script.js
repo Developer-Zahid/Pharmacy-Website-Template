@@ -112,17 +112,17 @@
 	});
 
     /*  Banner slider */
-    $(".banner__slider").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 500,
-        arrows: false,
-        dots: true,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        infinite: true,
-    });
+    // $(".banner__slider").slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 3000,
+    //     speed: 500,
+    //     arrows: false,
+    //     dots: true,
+    //     pauseOnHover: false,
+    //     pauseOnFocus: false,
+    //     infinite: true,
+    // });
 
 })(jQuery);

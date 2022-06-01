@@ -336,12 +336,6 @@ hr {
 }
 
 /* Zikzak Section Style */
-@media (min-width: 992px) {
-  .section-zikzak > [class*="col"]:nth-of-type(2n) > [class*="card"] {
-    margin-top: 2.5rem;
-  }
-}
-
 .full-page {
   display: -webkit-box;
   display: -webkit-flex;
@@ -356,6 +350,10 @@ hr {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+}
+
+.details__text {
+  font-size: 1.25rem;
 }
 
 /* Common Transition Style */
@@ -715,6 +713,12 @@ hr {
   max-height: 3.75rem;
 }
 
+@media (min-width: 768px) {
+  .header .navbar-brand__image {
+    max-height: 5.4375rem;
+  }
+}
+
 .header .navbar-toggler {
   position: relative;
   width: 2.8125rem;
@@ -1072,191 +1076,7 @@ hr {
 
 /* Main Banner Section Style */
 .banner {
-  padding: 3.125rem 0;
-}
-
-@media (max-width: 991.98px) {
-  .banner {
-    padding-top: 0;
-  }
-}
-
-.banner__content {
-  padding: 6.25rem 0;
-}
-
-@media (max-width: 991.98px) {
-  .banner__content {
-    padding: 3.125rem 0;
-  }
-}
-
-.banner__badge {
-  display: inline-block;
-  padding: 0.5rem 1.125rem;
-  background-color: #e7eaf0;
-}
-
-.banner__title {
-  font-size: 3.75rem;
-  font-family: "Inter", sans-serif;
-  margin: 0.9375rem 0;
-  text-transform: capitalize;
-}
-
-@media (max-width: 767.98px) {
-  .banner__title {
-    font-size: 2.5rem;
-  }
-}
-
-.banner__text {
-  color: #69778c;
-  font-weight: 500;
-}
-
-@media (min-width: 576px) {
-  .banner__text {
-    font-size: 1.125rem;
-  }
-}
-
-.banner__form {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 37.5rem;
-  -webkit-box-shadow: 0 1px 60px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 60px 0 rgba(0, 0, 0, 0.1);
-  margin-top: 2.5rem;
-}
-
-@media (max-width: 575.98px) {
-  .banner__form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-.banner__form__input {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-     -moz-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  font-size: 1.125rem;
-  font-weight: 600;
-  padding: 1.25rem 1.875rem;
-  background-color: #ffffff;
-  border: 0;
-}
-
-@media (min-width: 576px) {
-  .banner__form__input {
-    border-right: 1px solid #812bb2;
-  }
-}
-
-.banner__form__btn {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  color: #ffffff;
-  font-size: 1.125rem;
-  font-weight: 700;
-  background-color: #812bb2;
-  padding: 0.3125rem 2.5rem;
-  border: 0;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-@media (max-width: 575.98px) {
-  .banner__form__btn {
-    padding: 0.9375rem;
-  }
-}
-
-.banner__form__btn:active {
-  color: #812bb2;
-  background-color: #ffffff;
-  padding-left: 2.8125rem;
-  padding-right: 2.8125rem;
-}
-
-@media (min-width: 576px) {
-  .banner__form__btn:focus, .banner__form__btn:hover {
-    color: #812bb2;
-    background-color: #ffffff;
-    padding-left: 2.8125rem;
-    padding-right: 2.8125rem;
-  }
-}
-
-.banner__slider-wrapper {
-  position: relative;
-  padding: 3.125rem 0;
-}
-
-.banner__slider-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 50%;
-  background-color: rgba(129, 43, 178, 0.4);
-}
-
-.banner__slide {
-  padding-right: 3.125rem;
-}
-
-@media (max-width: 575.98px) {
-  .banner__slide {
-    padding-right: 1.25rem;
-  }
-}
-
-.banner__slide__content {
-  position: relative;
-  -webkit-perspective: 1000px;
-     -moz-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-     -moz-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  min-height: 28.125rem;
-  overflow: hidden;
-}
-
-.banner__slide__content__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: rotateY(-25deg);
-     -moz-transform: rotateY(-25deg);
-          transform: rotateY(-25deg);
-  -webkit-transform-origin: right;
-     -moz-transform-origin: right;
-      -ms-transform-origin: right;
-       -o-transform-origin: right;
-          transform-origin: right;
-  width: 120%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  outline: 1px solid transparent;
+  padding: 15.625rem 0;
 }
 
 /* Sub Banner Section Style */
@@ -1265,11 +1085,11 @@ hr {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: var(--background-image), -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(13, 25, 67, 0.5)));
-  background-image: var(--background-image), -webkit-linear-gradient(transparent, rgba(13, 25, 67, 0.5));
-  background-image: var(--background-image), -moz-linear-gradient(transparent, rgba(13, 25, 67, 0.5));
-  background-image: var(--background-image), -o-linear-gradient(transparent, rgba(13, 25, 67, 0.5));
-  background-image: var(--background-image), linear-gradient(transparent, rgba(13, 25, 67, 0.5));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(13, 25, 67, 0.5)));
+  background-image: -webkit-linear-gradient(transparent, rgba(13, 25, 67, 0.5));
+  background-image: -moz-linear-gradient(transparent, rgba(13, 25, 67, 0.5));
+  background-image: -o-linear-gradient(transparent, rgba(13, 25, 67, 0.5));
+  background-image: linear-gradient(transparent, rgba(13, 25, 67, 0.5));
   background-blend-mode: darken;
 }
 

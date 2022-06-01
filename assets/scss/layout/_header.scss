@@ -16,6 +16,9 @@
 		&-brand{
 			&__image{
 				max-height: toRem(60);
+				@include min-tablet{
+					max-height: toRem(87);
+				}
 			}
 		}
 		&-toggler{

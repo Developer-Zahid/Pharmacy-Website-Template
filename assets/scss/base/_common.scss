@@ -198,14 +198,20 @@ hr{
 }
 
 /* Zikzak Section Style */
-.section-zikzak > [class*="col"]:nth-of-type(2n) > [class*="card"]{
-	@include min-desktop{
-		margin-top: toRem(40);
-	}
-}
+// .section-zikzak > [class*="col"]:nth-of-type(2n) > [class*="card"]{
+// 	@include min-desktop{
+// 		margin-top: toRem(40);
+// 	}
+// }
 
 .full-page{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+}
+
+.details{
+	&__text{
+		font-size: toRem(20);
+	}
 }
