@@ -1,6 +1,9 @@
 /* Main Banner Section Style */
 .banner{
     padding: toRem(250) 0;
+    @include mobile{
+        padding: toRem(200) 0;
+    }
 }
 
 /* Sub Banner Section Style */

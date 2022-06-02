@@ -34,9 +34,9 @@
             }
         }
         &__title{
-            font-size: toRem(34);
+            font-size: toRem(32);
             @include desktop-lg{
-                font-size: toRem(28);
+                font-size: toRem(25);
             }
             font-weight: 700;
             font-family: $font-secondary;

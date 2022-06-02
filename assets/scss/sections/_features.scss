@@ -1,0 +1,42 @@
+/* Features Section Style */
+.features{
+    &__card{
+        padding: toRem(20);
+        margin-bottom: toRem(30);
+        background-color: $color-white-soft;
+        border-radius: toRem(7);
+        @include tablet{
+            text-align: center;
+        }
+        @include min-tablet{
+            align-items: center;
+            flex-direction: row !important;
+        }
+        &__icon{
+            @include tablet{
+                margin-bottom: toRem(20);
+            }
+            @include min-tablet{
+                margin-right: toRem(20);
+            }
+            &__image{
+                max-height: toRem(60);
+            }
+        }
+        &__title{
+            font-size: toRem(20);
+            font-weight: 700;
+            font-family: $font-secondary;
+            margin-bottom: 0;
+        }
+        @media (hover: hover){
+            transition:
+                background-color .2s ease-in-out,
+                color .2s ease-in-out;
+            &:hover{
+                color: $color-white;
+                background-color: $color-primary;
+            }
+        }
+    }
+}
