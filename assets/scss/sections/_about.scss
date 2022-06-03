@@ -3,14 +3,6 @@
     &--bg{
         background-color: $color-white-soft;
     }
-    &__text{
-        @include min-tablet{
-            font-size: toRem(18);
-        }
-        @include min-desktop{
-            font-size: toRem(22);
-        }
-    }
     &__list__item{
         position: relative;
         padding: toRem(30) 0;

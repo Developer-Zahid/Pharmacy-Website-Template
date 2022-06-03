@@ -194,9 +194,24 @@ hr{
 	min-height: 100vh;
 }
 
-/* Details section Style */
-.details{
-	&__text{
-		font-size: toRem(20);
+/* Text Box section Style */
+.text__container{
+	color: $color-white;
+	background-color: $color-primary;
+	padding: toRem(40);
+	@include mobile{
+		padding: toRem(40) toRem(15);
 	}
+	max-width: toRem(950);
+	border-radius: toRem(7);
+	box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-primary, $alpha: 0.4);
+	&__text{
+        margin-bottom: 0;
+        @include min-tablet{
+            font-size: toRem(18);
+        }
+        @include min-desktop{
+            font-size: toRem(22);
+        }
+    }
 }
